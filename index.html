@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" name="contact-form" enctype="multipart/form-data">
+        <h4>Обмін бонусних балів учнів на сертифікати</h4>
+        <label for="name">Прізвище та ім'я</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Прізвище та ім'я"
+          required
+        />
+        <label for="class">Клас</label>
+        <select name="class" id="class" required>
+          <option value="" selected disabled>Оберіть клас</option>
+          <option value="5">5</option>
+          <option value="5-1">5-1</option>
+          <option value="6">6</option>
+          <option value="6-1">6-1</option>
+          <option value="6-2">6-2</option>
+          <option value="6-3">6-3</option>
+          <option value="7">7</option>
+          <option value="7-1">7-1</option>
+          <option value="7-2">7-2</option>
+          <option value="8С">8</option>
+          <option value="8-2">8-2</option>
+          <option value="9">9</option>
+          <option value="9-1">9-1</option>
+          <option value="9-2">9-2</option>
+          <option value="10">10</option>
+          <option value="10-1">10-1</option>
+          <option value="10-2">10-2</option>
+          <option value="11">11</option>
+          <option value="11-1">11-1</option>
+          <option value="11-2">11-2</option>
+        </select>
+
+        <label for="sertificate">Назва сертифікату</label>
+        <select name="sertificate" id="sertificate" required>
+          <option value="" selected disabled>Оберіть сертифікат</option>
+          <option value="День без ДЗ" data-points="100">День без ДЗ</option>
+          <option value="Проспати урок" data-points="100">Проспати урок</option>
+          <option value="Урок з чаюванням на клас" data-points="500">
+            Урок з чаюванням на клас
+          </option>
+          <option value="Урок з темою не за програмою" data-points="300">
+            Урок з темою не за програмою
+          </option>
+          <option value="Не робити відпрацювання" data-points="100">
+            Не робити відпрацювання
+          </option>
+          <option value="Бал до самостійної" data-points="50">
+            Бал до самостійної
+          </option>
+          <option value="Бал до контрольної" data-points="150">
+            Бал до контрольної
+          </option>
+        </select>
+
+        <label for="score">Кількість балів</label>
+        <input
+          type="number"
+          name="score"
+          id="score"
+          placeholder="Кількість балів"
+          readonly
+          required
+        />
+
+        <button type="submit" id="submit">Надіслати</button>
+      </form>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
